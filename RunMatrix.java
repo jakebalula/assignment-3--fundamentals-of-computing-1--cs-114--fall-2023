@@ -5,9 +5,11 @@ public class RunMatrix {
     int row;
     int col;
     int currentValue = 1;
+    int size;
+
     Scanner scan = new Scanner(System.in);
     System.out.println("Please enter the size of your matrix");
-    int size = scan.nextInt();
+    size = scan.nextInt();
     System.out.println("Your matrix is " + size + " x " + size);
 
     System.out.println("Printing matrix:");
