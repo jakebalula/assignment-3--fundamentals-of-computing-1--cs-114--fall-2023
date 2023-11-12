@@ -34,14 +34,6 @@ public class Matrix {
    }
   }
   public void flipMatrix () {
-    for (row = 0; row < matrix.length; row++) {
-      for (col = 0; col < matrix[row].length / 2; col++){
-        if (row != col && row + col != matrix.length - 1) {
-          swap (row, col, row, matrix.length - 1 - col);
-          System.out.print(matrix[row][col] + "\t");
-        }
-        System.out.println();
-      }
+
     }
-  }
 }

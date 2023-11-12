@@ -21,6 +21,7 @@ public class RunMatrix {
 
     System.out.println("Flipping matrix...");
     matrix.flipMatrix();
+
    scan.close();
   }
 }
