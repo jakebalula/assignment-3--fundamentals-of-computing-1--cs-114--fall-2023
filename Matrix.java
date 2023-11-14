@@ -38,7 +38,7 @@ public class Matrix {
       for (col = 0; col < matrix[row].length; col++) {
         matrix[row][col] = currentValue++;
       }
-   }
+    }
   }
 
   public void flipMatrix () { //Flips the matrix
