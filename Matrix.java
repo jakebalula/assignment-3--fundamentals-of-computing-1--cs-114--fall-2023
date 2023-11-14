@@ -3,6 +3,7 @@ public class Matrix {
   int size;
   int row;
   int col;
+  int temp;
   private int [][] matrix = new int [size] [size];
 
   public Matrix (int size) { //Initialize matrix
@@ -10,7 +11,7 @@ public class Matrix {
   }
 
   private void swap(int x1, int y1, int x2, int y2) { //Method to swap the numbers in matrix
-    int temp = matrix[x1][y1];
+    temp = matrix[x1][y1];
     matrix[x1][y1] = matrix[x2][y2];
     matrix[x2][y2] = temp;
   }
