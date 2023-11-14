@@ -37,7 +37,6 @@ public class Matrix {
       for (col = 0; col < matrix[row].length; col++) {
         matrix[row][col] = currentValue++;
       }
-      System.out.println();
    }
   }
 
@@ -48,7 +47,6 @@ public class Matrix {
           swap(row, col, matrix.length - 1 - row, matrix.length-1 - col);
         }
       }
-      System.out.println();
     }
   }
 }
