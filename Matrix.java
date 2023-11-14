@@ -18,7 +18,15 @@ public class Matrix {
   public void printMatrix() { //Prints the matrix with no elements
     for (row = 0; row < matrix.length; row++) {
       for (col = 0; col < matrix[row].length; col++) {
-        System.out.print(matrix[row][col] + "\t");
+        if(col == matrix.length - row - 1)
+        {
+          System.out.print("\033[33m");
+          System.out.printf("%d\t", matrix[row][col]);
+          System.out.print("\u001b[0m");
+        }
+        else{
+          System.out.print(matrix[row][col] + "\t");
+        }
       }
       System.out.println();
    }
@@ -28,12 +36,19 @@ public class Matrix {
     for (row = 0; row < matrix.length; row++) {
       for (col = 0; col < matrix[row].length; col++) {
         matrix[row][col] = currentValue++;
-        System.out.print(matrix[row][col] + "\t");
       }
       System.out.println();
    }
   }
-  public void flipMatrix () { //Flips the matrix
 
+  public void flipMatrix () { //Flips the matrix
+    for(row = 0; row < matrix.length / 2; row++) {
+      for (col = 0; col < matrix[row].length; col++) {
+        if(col != matrix.length - row - 1) {
+          swap(row, col, matrix.length - 1 - row, matrix.length-1 - col);
+        }
+      }
+      System.out.println();
     }
+  }
 }

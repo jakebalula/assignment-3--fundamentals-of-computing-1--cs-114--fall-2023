@@ -17,11 +17,12 @@ public class RunMatrix {
 
     System.out.println("Populating matirx...");
     matrix.populateMatrix();
+    matrix.printMatrix();
     System.out.println();
 
     System.out.println("Flipping matrix...");
     matrix.flipMatrix();
-
+    matrix.printMatrix();
    scan.close();
   }
 }
