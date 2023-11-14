@@ -21,9 +21,9 @@ public class Matrix {
       for (col = 0; col < matrix[row].length; col++) {
         if(col == matrix.length - row - 1)
         {
-          System.out.print("\033[33m");
+          System.out.print("\033[33m"); //Sets diagonal color to yellow
           System.out.printf("%d\t", matrix[row][col]);
-          System.out.print("\u001b[0m");
+          System.out.print("\u001b[0m"); //Switches the color back to default
         }
         else{
           System.out.print(matrix[row][col] + "\t");
@@ -36,7 +36,7 @@ public class Matrix {
   public void populateMatrix() { //Populates the matrix with numbers 1 - size*size
     for (row = 0; row < matrix.length; row++) {
       for (col = 0; col < matrix[row].length; col++) {
-        matrix[row][col] = currentValue++;
+        matrix[row][col] = currentValue++; //Fills the matrix starting from 1
       }
     }
   }
