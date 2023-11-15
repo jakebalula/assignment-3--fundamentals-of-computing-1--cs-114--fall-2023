@@ -6,17 +6,17 @@ public class Matrix {
   int temp;
   private int [][] matrix = new int [size] [size];
 
-  public Matrix (int size) { //Initialize matrix
+  public Matrix (int size) {
     matrix = new int [size][size];
   }
 
-  private void swap(int x1, int y1, int x2, int y2) { //Method to swap the numbers in matrix
+  private void swap(int x1, int y1, int x2, int y2) {
     temp = matrix[x1][y1];
     matrix[x1][y1] = matrix[x2][y2];
     matrix[x2][y2] = temp;
   }
 
-  public void printMatrix() { //Prints the matrix with no elements
+  public void printMatrix() {
     for (row = 0; row < matrix.length; row++) {
       for (col = 0; col < matrix[row].length; col++) {
         if(col == matrix.length - row - 1)
@@ -33,7 +33,7 @@ public class Matrix {
    }
   }
 
-  public void populateMatrix() { //Populates the matrix with numbers 1 - size*size
+  public void populateMatrix() {
     for (row = 0; row < matrix.length; row++) {
       for (col = 0; col < matrix[row].length; col++) {
         matrix[row][col] = currentValue++; //Fills the matrix starting from 1
@@ -41,7 +41,7 @@ public class Matrix {
     }
   }
 
-  public void flipMatrix () { //Flips the matrix
+  public void flipMatrix () {
     for(row = 0; row < matrix.length / 2; row++) {
       for (col = 0; col < matrix[row].length; col++) {
         if(col != matrix.length - row - 1) {
