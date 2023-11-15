@@ -45,7 +45,7 @@ public class Matrix {
     for(row = 0; row < matrix.length / 2; row++) {
       for (col = 0; col < matrix[row].length; col++) {
         if(col != matrix.length - row - 1) {
-          swap(row, col, matrix.length - 1 - row, matrix.length-1 - col);
+          swap(row, col, matrix.length - 1 - row, matrix.length-1 - col); //Algorithm to swap values except for the diagonal
         }
       }
     }
