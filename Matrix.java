@@ -21,7 +21,7 @@ public class Matrix {
       for (col = 0; col < matrix[row].length; col++) {
         if(col == matrix.length - row - 1)
         {
-          System.out.print("\033[33m"); //Sets diagonal color to yellow
+          System.out.print("\u001B[32m"); //Sets diagonal color to green
           System.out.printf("%d\t", matrix[row][col]);
           System.out.print("\u001b[0m"); //Switches the color back to default
         }
@@ -44,7 +44,7 @@ public class Matrix {
   public void flipMatrix () {
     for(row = 0; row < matrix.length / 2; row++) {
       for (col = 0; col < matrix[row].length; col++) {
-        if(col != matrix.length - row - 1) {
+        if(col != matrix.length - row - 1) { //Identifies if the number is apart of the diagonal row
           swap(row, col, matrix.length - 1 - row, matrix.length-1 - col); //Algorithm to swap values except for the diagonal
         }
       }
